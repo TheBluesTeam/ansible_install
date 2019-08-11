@@ -1,0 +1,28 @@
+#1. local.repo 생성
+vi /etc/yum.repos.d/local.repo
+[local]
+name=local
+baseurl=file:///media
+enabled=1
+gpgcheck=0
+
+#2. 인증키
+rpm --import 
+http://mirror.centos.org/centos/7/os/x86_64/RPM-GPG-KEY-CentOS-7
+
+#3. repository 업데이트
+yum repolist
+
+#4. EPEL(Extra Packages for Enterprise Linux) 설치
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+
+컨트롤 머신 설치 
+#5. pip와 git 설치
+yum install -y git python-pip
+
+#6. ansible 설치 
+pip install ansible
+yum install ansible -y
+
+rpm -qa | grep ansible
