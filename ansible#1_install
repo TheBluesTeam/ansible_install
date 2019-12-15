@@ -29,3 +29,4 @@ rpm -qa | grep ansible
 
 
 [참고]#https://sysnet4admin.blogspot.com/2017/06/ansible-rhel-72.html#.XVAa6egzZhE
+c
