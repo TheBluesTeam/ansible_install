@@ -15,6 +15,9 @@ yum repolist
 
 #4. EPEL(Extra Packages for Enterprise Linux) 설치
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+(둘중하나)
+
+
 
 
 컨트롤 머신 설치 
