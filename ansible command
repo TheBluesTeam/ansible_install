@@ -1,0 +1,11 @@
+ansible all -m shell -a "df -h" -k    -> client 용량확인
+
+ansible all -i test -m ping -k     -> test 파일에있는 host 만 불러오기
+
+ansible nginx -m ping -k    -> /etc/ansible/hosts 안에 그룹에 있는 host 불러오기
+
+ansible all -m user -a "name=bloter password=1234" -k    -> host에 유저생성
+
+ansible nginx -m copy -a "src=./bloter.file dest=/tmp/" -k   -> host /tmp/ 경로 밑에 파일 복사
+
+ansible nginx -m yum -a "name=httpd state=present" -k   -> nginx 그룹 client에 패키지 설치
